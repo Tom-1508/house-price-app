@@ -1,4 +1,3 @@
-````markdown
 # 🏠 California House Price Prediction App
 
 This project is a **Streamlit web app** that predicts **California house prices** using the **XGBoost Regressor** model.  
@@ -16,10 +15,10 @@ It uses the **California Housing dataset** from `sklearn.datasets`.
 
 ---
 
-## 📊 Demo
+## 📊 Live Demo
 
-🔗 Live Demo (Hugging Face Spaces):  
-👉 [California House Price App](https://huggingface.co/spaces/Tom-1508/california-house-price)
+🔗 Deployed on Render:  
+👉 [California House Price Prediction App](https://house-price-prediction-app-m0z3.onrender.com/)
 
 ---
 
@@ -30,7 +29,7 @@ Clone the repo:
 ```bash
 git clone https://github.com/Tom-1508/house-price-app.git
 cd house-price-app
-````
+```
 
 Install dependencies:
 
@@ -41,7 +40,7 @@ pip install -r requirements.txt
 Run the app:
 
 ```bash
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 
 ---
@@ -50,7 +49,7 @@ streamlit run app.py
 
 ```
 house-price-app/
-│── app.py                 # Main Streamlit app
+│── streamlit_app.py       # Main Streamlit app
 │── house_price_model.pkl  # Saved trained model
 │── requirements.txt       # Dependencies
 │── README.md              # Project documentation
@@ -68,14 +67,18 @@ house-price-app/
 
 ---
 
-## 🌍 Deployment (Hugging Face Spaces)
+## 🌍 Deployment (Render)
 
-1. Push this repo to GitHub
-2. Go to [Hugging Face Spaces](https://huggingface.co/spaces)
-3. Create a new Space → Select **Streamlit** SDK
-4. Connect your GitHub repo (or upload manually)
-5. Hugging Face installs dependencies from `requirements.txt`
-6. App goes live 🚀
+1. Push this repo to GitHub  
+2. Go to [Render](https://render.com) → **New Web Service**  
+3. Connect your GitHub repo  
+4. Set up with:  
+   - **Build Command:** `pip install -r requirements.txt`  
+   - **Start Command:**  
+     ```bash
+     streamlit run streamlit_app.py --server.port $PORT --server.address 0.0.0.0
+     ```  
+5. Click **Deploy** 🚀  
 
 ---
 
@@ -98,5 +101,3 @@ Input features (example):
 ---
 
 🙌 Made with ❤️ using **Streamlit & XGBoost**
-
-```
